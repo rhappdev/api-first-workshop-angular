@@ -28,10 +28,10 @@ export class ItemService {
   }
 
   getItemById(id): Observable<Item> {
-    return Observable.throw('Not Implemented');
+    return this.todoAPI.getItem(id);
   }
 
   updateItem(newValues) {
-    return Observable.throw('Not Implemented');
+    return this.todoAPI.updateItem(newValues.id, newValues);
   }
 }
